@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility: fade-in animation for cards, modals, toasts, etc. */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.2s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px);}
+    to { opacity: 1; transform: none;}
+  }
+}
+
+/* Body base styles: gradient BG, font, color */
+body {
+  @apply bg-gradient-to-br from-white via-cyan-50 to-indigo-50 text-gray-800 font-sans;
+}
+
+/* CSS Variables: app-wide theming */
+:root {
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #0369a1;
+  --color-accent: #22d3ee;
+  --color-accent-dark: #134e4a;
+}
+
+/* Dark mode variable overrides */
+.dark {
+  --color-primary: #0369a1;
+  --color-accent: #134e4a;
+}
+
+/* Optional: focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #0ea5e9);
+  outline-offset: 2px;
+  transition: outline 0.15s cubic-bezier(0.4,0,0.2,1);
+}
