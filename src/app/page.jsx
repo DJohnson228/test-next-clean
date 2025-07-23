@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ExcelExport from "@/components/ExcelExport";
-import { generateAIInsights } from "@/lib/ai-recommend";
+import { generateAIInsights } from "@/lib/ai-recommend-fixed";
 import TelehealthReferralModal from "@/components/TelehealthReferralModal";
 import jsPDF from "jspdf";
 import { useSession, signIn } from "next-auth/react";
