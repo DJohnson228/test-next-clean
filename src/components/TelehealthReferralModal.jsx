@@ -1,17 +1,9 @@
+
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-<Textarea
-  placeholder="Describe your symptoms or reason for referral (optional)"
-  value={reason}
-  ref={textareaRef}
-  onChange={e => setReason(e.target.value)}
-  rows={4}
-  className="w-full rounded-lg border border-gray-200 focus:ring-cyan-400 transition"
-  disabled={submitting}
-/>
 import { Sparkles, CheckCircle2, X } from "lucide-react";
 import toast from "react-hot-toast";
 
@@ -75,7 +67,7 @@ export default function TelehealthReferralModal({ open, onClose, hospital }) {
             <span className="block text-xs font-medium text-gray-500 mb-1">
               Reason or symptoms (optional)
             </span>
-            <Textarea
+            <textarea
               placeholder="Describe your symptoms or reason for referral (optional)"
               value={reason}
               ref={textareaRef}
@@ -108,4 +100,3 @@ export default function TelehealthReferralModal({ open, onClose, hospital }) {
     </Dialog>
   );
 }
-
